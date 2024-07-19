@@ -1,0 +1,42 @@
+<div class="full-screen-container">
+  <div class="header" style="display:flex; align-items: center;background-color: #f9fafb;">
+    <div style="">
+      <img style="height: 35px;" src="/assets/logo1.png">
+    </div>
+
+    <div style="margin-left: auto;">
+      <div class="top-menu-bar">
+        <p-menubar [model]="items" />
+      </div>
+    </div>
+
+  </div>
+  <div class="content">
+    <!-- <app-about-us id="about-us-id"></app-about-us>
+        <p-divider type="solid" />
+        <app-products id="products-id" ></app-products>
+        <p-divider type="solid" />
+        <app-contact id="contact-id" ></app-contact> -->
+    <div id="about-us-id">
+      <div class="parallax" style="background-image: url('/assets/parallax/aboutus.jpeg');"></div>
+
+      <div class="section section-light">
+        <app-about-us style="width: 100%;"></app-about-us>
+      </div>
+    </div>
+
+
+    <div class="section section-light">
+      <app-products id="products-id" style="width: 100%;"></app-products>
+    </div>
+
+    <div id="contact-id">
+      <div class="parallax" style="background-image: url('/assets/parallax/contactus.jpeg');"></div>
+
+      <div class="section section-light">
+        <app-contact style="width: 100%;"></app-contact>
+      </div>
+    </div>
+
+  </div>
+</div>

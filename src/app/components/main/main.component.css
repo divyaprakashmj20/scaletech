@@ -1,0 +1,70 @@
+.full-screen-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden; /* Prevent body scroll */
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 0 1rem;
+    text-align: center;
+    position: fixed; /* Fix the header */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the header is on top */
+  }
+  
+  .content {
+    margin-top: 3rem; /* Adjust based on header height */
+    flex: 1 1 auto; /* Allow the content to grow and take the remaining space */
+    overflow-y: auto; /* Make content scrollable */
+    padding: 1rem;
+    background-color: #ffffff; /* Optional background color */
+  }
+  
+  :host ::ng-deep .top-menu-bar .p-menubar {
+    border: none;
+  }
+
+  @media screen and (max-width: 960px) {
+    :host ::ng-deep .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        left: -205px;
+        z-index: 1;
+        width: 260px;
+    }
+}
+
+/* styles.css or home.component.css */
+.parallax {
+  /* The image used */
+  background-image: url('https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg');
+
+  /* Set a specific height */
+  /* min-height: 500px; */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: black;
+}
