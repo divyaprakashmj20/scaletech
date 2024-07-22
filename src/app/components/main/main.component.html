@@ -1,7 +1,7 @@
 <div class="full-screen-container">
   <div class="header" style="display:flex; align-items: center;background-color: #f9fafb;">
     <div style="">
-      <img style="height: 35px;" src="/assets/logo1.png">
+      <img style="height: 35px;" src="assets/logo1.png"/>
     </div>
 
     <div style="margin-left: auto;">
@@ -18,7 +18,33 @@
         <p-divider type="solid" />
         <app-contact id="contact-id" ></app-contact> -->
     <div id="about-us-id">
-      <div class="parallax" style="background-image: url('/assets/parallax/aboutus.jpeg');"></div>
+      <div>
+        <div class="welcome">
+          Welcome to Scale Tech
+        </div>
+        <div class="innovation">
+          Innovating Service, Enhancing Experiences
+        </div>
+      </div>
+      <!-- <div class="parallax" style="background-image: url('assets/about-us/3.webp');"> -->
+        <div>
+        <p-carousel [value]="products" [numVisible]="4" [numScroll]="1" [showNavigators]="false" [showIndicators]="false" >
+          <ng-template pTemplate="item" let-product>
+            <div class="product-item">
+              <div class="product-item-content">
+                <div class="p-mb-3">
+                  <img src="assets/about-us/{{product.image}}" [alt]="product.name" class="product-image" />
+                </div>
+                <!-- <div>
+                  <h4>{{ product.name }}</h4>
+                  <p>{{ product.description }}</p>
+                </div> -->
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+      <!-- </div> -->
 
       <div class="section section-light">
         <app-about-us style="width: 100%;"></app-about-us>
@@ -31,7 +57,7 @@
     </div>
 
     <div id="contact-id">
-      <div class="parallax" style="background-image: url('/assets/parallax/contactus.jpeg');"></div>
+      <div class="parallax" style="background-image: url('assets/parallax/contactus.jpeg');"></div>
 
       <div class="section section-light">
         <app-contact style="width: 100%;"></app-contact>

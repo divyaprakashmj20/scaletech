@@ -1,0 +1,47 @@
+.product-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* .product-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  } */
+  
+  .product-image {
+    width: 100%;
+    /* max-width: 200px; */
+    height: auto;
+  }
+  
+  .p-carousel {
+    margin-bottom: 2em;
+  }
+  
+  .p-carousel .p-carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .p-carousel .p-carousel-item .product-item {
+    padding: 1em;
+    margin: 0.5em;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+  }
+  
+  .p-carousel-item {
+    position: relative;
+  }
+
+  :host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button{
+    border-radius: 6px;
+  }

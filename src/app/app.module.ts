@@ -13,6 +13,8 @@ import { PosComponent } from './components/pos/pos.component';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { DividerModule } from 'primeng/divider';
+import { CarouselModule } from 'primeng/carousel';
+import { TagModule } from 'primeng/tag';
 
 
 
@@ -33,7 +35,9 @@ import { DividerModule } from 'primeng/divider';
     MenubarModule,
     CardModule,
     ButtonModule,
-    DividerModule
+    DividerModule,
+    CarouselModule,
+    TagModule,
   ],
   providers: [
     provideClientHydration()
