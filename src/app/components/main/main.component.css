@@ -112,7 +112,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 2em;
+  /* padding: 2em; */
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
   background-color: #fff;
@@ -156,6 +156,7 @@
 
 :host ::ng-deep.p-card-title {
   font-size: 3rem;
+  text-align: left;
 }
 
 :host ::ng-deep .p-card-subtitle {

@@ -28,4 +28,5 @@
 
 :host ::ng-deep.p-card-title {
   font-size: 2rem;
+  text-align: left;
 }
