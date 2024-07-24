@@ -1,28 +1,31 @@
 .parallax {
-    /* The image used */
-    background-image: url('https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg');
-  
-    /* Set a specific height */
-    /* min-height: 500px; */
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .section {
-    /* height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: white;
-  }
-  
-  .section-light {
-    background-color: #f4f4f4;
-    color: black;
-  }
-  
+  /* The image used */
+  background-image: url('https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg');
+
+  /* Set a specific height */
+  /* min-height: 500px; */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: black;
+}
+
+:host ::ng-deep.p-card-title {
+  font-size: 2rem;
+}

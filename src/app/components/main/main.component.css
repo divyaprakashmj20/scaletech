@@ -1,47 +1,58 @@
 .full-screen-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* 100% of the viewport height */
+  overflow: hidden;
+  /* Prevent body scroll */
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 0 1rem;
+  text-align: center;
+  position: fixed;
+  /* Fix the header */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* Ensure the header is on top */
+}
+
+.content {
+  margin-top: 3rem;
+  /* Adjust based on header height */
+  flex: 1 1 auto;
+  /* Allow the content to grow and take the remaining space */
+  overflow-y: auto;
+  /* Make content scrollable */
+  padding: 1rem;
+  background-color: #ffffff;
+  /* Optional background color */
+}
+
+:host ::ng-deep .top-menu-bar .p-menubar {
+  border: none;
+}
+
+@media screen and (max-width: 960px) {
+  :host ::ng-deep .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* 100% of the viewport height */
-    overflow: hidden; /* Prevent body scroll */
-  }
-  
-  .header {
-    background-color: #333;
-    color: #fff;
-    padding: 0 1rem;
-    text-align: center;
-    position: fixed; /* Fix the header */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Ensure the header is on top */
-  }
-  
-  .content {
-    margin-top: 3rem; /* Adjust based on header height */
-    flex: 1 1 auto; /* Allow the content to grow and take the remaining space */
-    overflow-y: auto; /* Make content scrollable */
-    padding: 1rem;
-    background-color: #ffffff; /* Optional background color */
-  }
-  
-  :host ::ng-deep .top-menu-bar .p-menubar {
-    border: none;
+    top: 100%;
+    left: -205px;
+    z-index: 1;
+    width: 260px;
   }
 
-  @media screen and (max-width: 960px) {
-    :host ::ng-deep .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
-        display: flex;
-        flex-direction: column;
-        top: 100%;
-        left: -205px;
-        z-index: 1;
-        width: 260px;
-    }
-    .parallax {
-      background-attachment: scroll; /* Fallback for mobile devices */
-      background-size: contain; /* Adjust background size for smaller screens */
-    }
+  .parallax {
+    background-attachment: scroll;
+    /* Fallback for mobile devices */
+    background-size: contain;
+    /* Adjust background size for smaller screens */
+  }
 }
 
 /* styles.css or home.component.css */
@@ -73,7 +84,7 @@
   color: black;
 }
 
-.welcome{
+.welcome {
   font-family: "Raleway", sans-serif;
   color: black;
   font-weight: 700;
@@ -82,7 +93,7 @@
   margin: 36px 0;
 }
 
-.innovation{
+.innovation {
   font-family: "Raleway", sans-serif;
   color: black;
   font-weight: 700;
@@ -139,6 +150,14 @@
   position: relative;
 }
 
-:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button{
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
   border-radius: 6px;
+}
+
+:host ::ng-deep.p-card-title {
+  font-size: 3rem;
+}
+
+:host ::ng-deep .p-card-subtitle {
+  font-size: 1.5rem;
 }

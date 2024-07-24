@@ -1,7 +1,7 @@
 <div class="full-screen-container">
   <div class="header" style="display:flex; align-items: center;background-color: #f9fafb;">
     <div style="">
-      <img style="height: 35px;" src="assets/logo1.png"/>
+      <img style="height: 35px;" src="assets/logo1.png" />
     </div>
 
     <div style="margin-left: auto;">
@@ -19,16 +19,20 @@
         <app-contact id="contact-id" ></app-contact> -->
     <div id="about-us-id">
       <div>
-        <div class="welcome">
+        <p-card header="Welcome to Scale Tech" subheader="Innovating Services, Enhancing Experiences"
+          [style]="{fontFamily: 'Raleway, sans-serif' }">
+          <!-- <h1 class="welcome">
           Welcome to Scale Tech
-        </div>
-        <div class="innovation">
+        </h1> -->
+          <!-- <div class="innovation">
           Innovating Service, Enhancing Experiences
-        </div>
+        </div> -->
+        </p-card>
       </div>
       <!-- <div class="parallax" style="background-image: url('assets/about-us/3.webp');"> -->
-        <div>
-        <p-carousel [value]="products" [numVisible]="4" [numScroll]="1" [showNavigators]="false" [showIndicators]="false" >
+      <div>
+        <p-carousel [value]="products" [numVisible]="4" [numScroll]="1" [showNavigators]="false"
+          [showIndicators]="false">
           <ng-template pTemplate="item" let-product>
             <div class="product-item">
               <div class="product-item-content">
@@ -64,5 +68,12 @@
       </div>
     </div>
 
+    <div
+      style="display: flex;padding: 20px 0;flex-direction: column;align-items: center;background-color: #80808017;font-size: 9px;">
+      <div> © Copyright Scale Tech. All Rights Reserved </div>
+      <div> Designed by Scale Tech </div>
+    </div>
+
   </div>
+
 </div>
